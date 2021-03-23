@@ -1,0 +1,145 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans', sans-serif;
+}
+.navigation-top,
+.navigation-bottom {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	transform: translateZ(0);
+}
+.navigation-top {
+	top: 0;
+}
+.navigation-bottom {
+	bottom: 0;
+	background-color: red;
+	display: none;
+}
+.navigation-bottom .navigation-container {
+	background: unset;
+	background-color: #FFF;
+	border-top: 1px solid #E0E0E0;
+}
+.navigation-container {
+	padding: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	background: linear-gradient(135deg, rgba(50,150,194,1) 0%, rgba(118,120,226,1) 100%);
+}
+.toggle {
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-right: 16px;
+}
+.toggle a {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	color: #E0E0E0;
+	text-decoration: none;
+}
+.toggle img {
+	width: 32px;
+	height: 32px;
+}
+.search {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-input {
+	position: relative;
+	width: 100%;
+	max-width: 480px;
+}
+.search-input .search-input__inner {
+	width: calc(100% - 32px);
+	display: block;
+	line-height: 36px;
+	outline: none;
+	border-radius: 6px;
+	font-size: 16px;
+	padding: 0 16px;
+	border: 1px solid #E0E0E0;
+	transition: border-color .3s ease-in-out;
+	font-family: 'Noto Sans', sans-serif;
+}
+.search-input__inner:hover,
+.search-input__inner:focus {
+	border-color: rgb(50, 150, 194);
+}
+.menu {
+	margin-left: 16px;
+}
+.menu-item {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: transparent;
+	padding: 8px 12px;
+	color: #E0E0E0;
+	border-radius: 3px;
+	transition: color .15s ease-in .1s, background-color .3s ease-in-out;
+}
+.menu-item:hover,
+.menu-item:focus {
+	background-color: #FFFFFF50;
+	color: #00000090;
+}
+.menu-item + .menu-item {
+	margin-left: 12px;
+	font-size: 16px;
+}
+.menu-bottom {
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	background-color: rgb(255, 255, 255);
+	color: #333;
+	padding: 8px 16px;
+	border-radius: 10px;
+	transition: all .3s ease-in-out;
+}
+.menu-bottom:hover,
+.menu-bottom:focus {
+	background-color: rgb(50,150,194);
+	color: #E0E0E0;
+}
+.menu-bottom + .menu-bottom {
+	margin-left: 8px;
+}
+.menu-bottom .title {
+	text-align: center;
+	font-size: 13px;
+}
+.content {
+	margin: 64px 0 0;
+}
+.content div {
+}
+.container {
+	padding: 16px;
+	max-width: 1024px;
+	margin: 0 auto;
+	color: #A0A0A0;
+}
+@media screen and (max-width: 768px) {
+	.content {
+		margin-bottom: 64px;
+	}
+	.navigation-top .menu {
+		display: none;
+	}
+	.search-input {
+		max-width: unset;
+	}
+	.navigation-bottom {
+		display: block;
+	}
+}
